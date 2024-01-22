@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> 이벤트 리스너 속성에 자바스크립트 코드 </title>
+        <style>
+            h3{
+                
+                font-size: 25pt;
+                color: orangered;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>마우스를 올려 보세요.</h3>
+        <hr>
+        <img src="media/Sun.png" alt="이미지.."
+            onmouseover="this.src='media/Earth.png'"
+            onmouseout="this.src='media/Sun.png'">
+        <hr>
+        <h3>마우스를 눌러 보세요.</h3>
+        <hr>
+        <img src="media/Earth.png" alt="이미지.."
+            onmousedown="this.src='media/Sun.png'"
+            onmouseup="this.src='media/Earth.png'">
+    </body>
+</html>
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html> 
+    <body> 
+    <video width="600" controls id="theVideo">
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </video>
+    <br><br>
+    <video width="600" controls id="theVideo">
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </video>
+    </body>
+    <script>
+    document.getElementById("theVideo").addEventListener('loadedmetadata', function(e) {console.log(this.videoWidth, this.videoHeight, this.duration);});
+    </script>   
+</html>

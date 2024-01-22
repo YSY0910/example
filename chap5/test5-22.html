@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> 무지개 애니메이션 만들기 </title>
+        <style>
+            @keyframes rainbow{
+                0% {color: red;}
+                10% {color: orange;}
+                20% {color: yellow;}
+                35% {color: green;}
+                55% {color: blue;}
+                75% {color: navy;}
+                100% {color: purple;}
+            }
+            span{
+                animation-name: rainbow;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <span>무지개 색인 7색이 10초에 무한 반복하게 설정했습니다.</span>
+        </p>
+    </body>
+</html>
+
+<!--
+<head>
+    <title> 애니메이션 만들기 </title>
+    <style>
+        @keyframes textColorAni{
+            0% {color: blue;} /* 시작 시. 0% 대신 from 사용 가능 */
+            30% {color: green;} /* 30 경과시까지 */
+            100% {color: red;} /* 끝까지. 100대신 to 사용 가능 */
+        }
+        span{
+            animation-name: textColorAni; /* 애니메이션 코드 이름 */
+            animation-duration: 5s; /* 애니메이션 1회 시간은 5초 */
+            animation-iteration-count: infinite; /* 무한 반복 */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span>span</span>텍스트를 5초에 blue, green, red로 무한 반복합니다.
+    </p>
+</body>
+-->

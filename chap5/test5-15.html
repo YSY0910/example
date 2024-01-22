@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> 기본 구조를 가진 표 만들기 </title>
+        <style>
+            table{
+                border: 1px solid blue;
+                border-collapse: collapse;
+            }
+            td, th{
+                border: 1px dotted green;
+                height: 20px; width: 100px;
+                padding: 10px; text-align: right;
+            }
+            th{
+                height: 40px; width: 100px;
+            }
+            td{
+                height: 20px; width: 100px;
+            }
+            thead th{
+                height: 40px; width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>1학기 성적</h3>
+        <hr>
+        <table>
+            <thead>
+                <tr><th>이름</th><th>HTML</th><th>CSS</th><th>Java</th></tr>
+            </thead>
+            <tfoot>
+                <tr><th>합</th><th>175</th><th>169</th><th>150</th></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>황기태</td><td>80</td><td>70</td><td>75</td></tr>
+                <tr><td>이재문</td><td>95</td><td>99</td><td>75</td></tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+

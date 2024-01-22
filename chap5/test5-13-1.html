@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> 리스트로 메뉴 만들기 </title>
+        <style>
+            #menubar{
+                background: linen;
+            }
+            #menubar ul{ /* 여백과 패딩 모두 0 */
+                margin: 0;
+                padding: 0;
+                width: 567px; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+            }
+            #menubar ul li{
+                display: inline; /* 새 줄로 넘어가지 않게 */
+                list-style-type: none; /* 마커 삭제 */
+                padding: 0px 15px; /* top=bottom=0, left=right=15px */
+            }
+            #menubar ul li a{
+                color: black;
+                text-decoration: none;
+            }
+            #menubar ul li a:hover{ /* 마우스 올라 갈 때 색 */
+                color: red; 
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="menubar">
+            <ul>
+                <!-- 하이퍼링크를 작성한후, target을 지정했다. target은 아이프레임의 이름으로 지정하였다.
+                따라서 하이퍼링크는 이름을 가지고 있는 아이프레임에게 전달하여 결과를 띄어준다-->
+                <li><a href="test5-2.html" target="i1">
+                    <b>Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></a></li>
+                <li><a href="test5-6.html" target="i2">
+                    <b>Cafe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></a></li>
+                <li><a href="test5-15.html" target="i3">
+                    <b>Juice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></a></li>
+                <li><a href="https://www.hankyung.com/" target="i4">
+                    <b>Smoothie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></a></li>
+                <li><a href="https://limbuscompany.kr/" target="i5">
+                    <b>Ade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></a>
+            </ul>
+
+            <!-- 아이 프레임에게 name을 지정 해줘서 이름을 부여했다.-->
+            <iframe name="i1" width="350" height="300"></iframe> 
+            <iframe name="i2" width="350" height="300"></iframe> 
+            <iframe name="i3" width="350" height="300"></iframe> 
+            <iframe name="i4" width="350" height="300"></iframe> 
+            <iframe name="i5" width="350" height="300"></iframe> 
+        </nav>
+    </body>
+</html>

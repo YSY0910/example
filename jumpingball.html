@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> JumpingBall </title>
+        <style>
+            @keyframes bounce{
+                from, to{
+                    bottom: 0px;
+                    animation-timing-function: ease-out;
+                }
+                50%{
+                    bottom: 500px;
+                    animation-timing-function: ease-in;
+                }
+            }
+            div{
+                position: absolute; width: 20px; height: 20px; border-radius: 10px;
+                animation-name: bounce;
+                animation-iteration-count: infinite;
+            }
+            #b1{
+                left: 10px; background: red;
+                border: 1px solid black;
+                animation-duration: 1s;
+            }
+            #b2{
+                left: 50px; background: orange;
+                border: 1px solid black;
+                animation-duration: 1.5s;
+            }
+            #b3{
+                left: 90px; background: yellow;
+                border: 1px solid black;
+                animation-duration: 2s;
+            }
+            #b4{
+                left: 130px; background: green;
+                border: 1px solid black;
+                animation-duration: 2.5s;
+            }
+            #b5{
+                left: 170px; background: blue;
+                border: 1px solid black;
+                animation-duration: 3s;
+            }
+            #b6{
+                left: 210px; background: navy;
+                border: 1px solid black;
+                animation-duration: 3.5s;
+            }
+            #b7{
+                left: 250px; background: purple;
+                border: 1px solid black;
+                animation-duration: 4s;
+            }
+            #b8{
+                left: 290px; background: black;
+                border: 1px solid black;
+                animation-duration: 4.5s;
+            }
+            #b9{
+                left: 330px; background: white;
+                border: 1px solid black;
+                animation-duration: 5s;
+            }
+            #b10{
+                left: 370px; background: gray;
+                border: 1px solid black;
+                animation-duration: 5.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+        <div id="b4"></div>
+        <div id="b5"></div>
+        <div id="b6"></div>
+        <div id="b7"></div>
+        <div id="b8"></div>
+        <div id="b9"></div>
+        <div id="b10"></div>
+    </body>
+</html>
