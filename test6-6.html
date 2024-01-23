@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>  </title>
+        <style>
+        
+        </style>
+        <script>
+            var x; //전역변수 x
+            function f(){
+                var y;  //지역변수 y
+                x = 10; //전역변수 x에 10 저장
+                y = 10; //지역변수 y에 10 저장
+                z = 10; //새로운 전역변수 z선언 후, 10으로 초기화
+            }
+        </script>
+        <script>
+            var x; //전역변수
+            function f(){
+                var x; //지역변수
+                x = 1; //지역변수 x에 1 저장
+                this.x = 100; //전역변수 x에 100 저장
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
