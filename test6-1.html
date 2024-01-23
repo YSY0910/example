@@ -7,17 +7,20 @@
             h3{
                 
                 font-size: 25pt;
-                color: orangered;
+                color: purple;
                 font-weight: bold;
             }
         </style>
     </head>
     <body>
-        <h3>마우스를 올려 보세요.</h3>
+        <h3>마우스를 올려 보세요.<br>
+            그리고 눌러보세요.</h3>
         <hr>
         <img src="media/Sun.png" alt="이미지.."
             onmouseover="this.src='media/Earth.png'"
-            onmouseout="this.src='media/Sun.png'">
+            onmouseout="this.src='media/Sun.png'"
+            onmousedown="this.src='media/Mars.png'"
+            onmouseup="this.src='media/Earth.png'">
         <hr>
         <h3>마우스를 눌러 보세요.</h3>
         <hr>
