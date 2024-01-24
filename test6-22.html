@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lnag="en">
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> while 문으로 0에서 n까지의 합 </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            let n = prompt("0보다 큰 정수를 입력하세요.", 0);
+            n = parseInt(n); // 문자열 n을 숫자로 바꿈
+            
+            let i = 0, sum = 0;
+            while(i <= n){
+            if(i % 10 != 9){ // 만약 변수 i를 10으로 나눈 나머지가 9가 아니라면, sum에 i를 더합니다.
+                sum += i; //이 코드는 i가 10으로 나누어 떨어지지 않는 경우에만 sum 변수에 i 값을 더하는 조건을 나타냅니다.
+                }
+            i++;
+            }
+            document.write("0에서 " + n + "까지의 합은 " + sum + "입니다.");
+        </script>
+    </body>
+</html>

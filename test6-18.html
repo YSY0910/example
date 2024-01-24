@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>if-else</title></head>
+<body>
+<h3> switch-case를 이용한 학점 매기기</h3>
+<hr>
+<script>
+    let grade;
+    let score = prompt("점수를 입력하세요", 100);
+    score = parseInt(score); // 문자열을 숫자로 바꿈
+
+    switch (true) {
+        case (score == 100):
+            grade = "만점으로 장학금 대상";
+            break;
+        case (score >= 95):
+            grade = "A+";
+            break;            
+        case (score >= 90):
+            grade = "A";
+            break;
+        case (score >= 80 && score < 90):
+            grade = "B";
+            break;
+        case (score >= 70 && score < 80):
+            grade = "C";
+            break;
+        case (score >= 60 && score < 70):
+            grade = "D";
+            break;
+        default:
+            grade = "F";
+    }
+    document.write(score + " 점은 " + grade + "입니다.<br>");
+</script>
+</body>
+</html>
