@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>객체 배열로 사용자 객체 만들기</title>
+        <script>
+            // 메소드로 사용할 3 개의 함수 작성
+            function inquiry() {
+                return this.balance;
+            }
+
+            function deposit(money) {
+                this.balance += money;
+            }
+
+            function withdraw(money) {
+                this.balance -= money;
+            }
+
+            // 사용자 객체를 배열로 표현
+            let accounts = [ // 배열을 순서있게 표시하므로 accounts [0, 1, 2] 이렇게 표시가 된다. 0번은 윤, 1번은 유, 2번은, 이.
+                { owner: "윤선용", code: "111", balance: 35000, inquiry, deposit, withdraw },
+                { owner: "유채리", code: "222", balance: 50000, inquiry, deposit, withdraw },
+                { owner: "이연복", code: "333", balance: 25000, inquiry, deposit, withdraw },
+                { owner: "김상규", code: "444", balance: 40000, inquiry, deposit, withdraw}
+            ];
+        </script>
+    </head>
+    <body>
+        <h3>객체 배열로 사용자 객체 만들기</h3>
+        <hr>
+        <script>
+            // 객체 배열 활용
+            for (let i = 0; i < accounts.length; i++) { //accounts[i]를 사용하여 사용자 객체를 담고 있는 배열을 순번으로 불러온다.
+                document.write(accounts[i].owner + ", ");
+                document.write(accounts[i].code + ", ");
+                document.write(accounts[i].balance + "<br>");
+
+                accounts[i].deposit(10000); // 만원 저금
+                document.write("10000원 저금 후 잔액은 " + accounts[i].inquiry() + "<br>");
+
+                accounts[i].withdraw(5000); // 오천원 인출
+                document.write("5000원 인출 후 잔액은 " + accounts[i].inquiry() + "<br>");
+                accounts[i].withdraw(10000); //만원 인출
+                document.write("10000원 인출 후 잔액은 " + accounts[i].inquiry() + "<br>");
+                document.write("<br>");
+            }
+        </script>
+    </body>
+</html>

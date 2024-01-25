@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lnag="en">
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> []로 배열 만들기 </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h3>[]로 배열 만들기</h3>
+        <hr>
+        <script>
+            let plots = [20, 5, 8, 15, 20];
+            document.write("let plots = [20, 5, 8, 15, 20]<br>");
+
+            for (i = 0; i < 5; i++){
+                let size = plots[i];
+                while(size>0){
+                    document.write("*");
+                    size--;
+                }
+                document.write(plots[i] + "<br>");
+            }
+        </script>
+        <hr>
+        <script>
+            let plots1 = [9, 18, 27, 36, 45];
+            document.write("let plots1 = [9, 18, 27, 36, 45]<br>");
+
+            for (i = 0; i < 5; i++){
+                let size = plots1[i];
+                while(size>0){
+                    document.write("@");
+                    size--;
+                }
+                document.write(plots1[i] + "<br>");
+            }
+        </script>
+    </body>
+</html>

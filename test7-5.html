@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lnag="en">
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> 방문 시간 마다 변하는 배경색 </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h3>페이지 방문 초시간이 짝수이면 진한 색상을, 홀수이면 연한 색상 배경이 된다.</h3>
+        <hr>
+        <script>
+            function reloadPage(){
+            let curr = new Date(); //현재 시간을 가진 Date 객체 생성.
+            if(curr.getSeconds() % 2 == 0)
+                document.body.style.backgroundColor = "blue";
+            else
+                document.body.style.backgroundColor = "lightskyblue";
+
+                document.write("현재 시간 : ");
+                document.write(curr.getHours(), "시, ");
+                document.write(curr.getMinutes(), "분, ");
+                document.write(curr.getSeconds(), "초<br>");
+            }
+
+            reloadPage();
+
+            setInterval(reloadPage, 1000)
+        </script>
+    </body>
+</html>
