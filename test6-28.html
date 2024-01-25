@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lnag="en">
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> 함수 만들기 </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            function gugudan(n){
+                let m = parseInt(n); // 문자열 m을 숫자로 바꿈.
+                if(isNaN(m) || m < 1 || m > 9){
+                    alert("잘못 입력 하셨습니다.");
+                    return;
+                }
+                for(let i = 1; i <= 9; i++){ // i는 1 ~ 9까지 반복
+                    document.write(m + "x" + i + "=" + m*i + "<br>");
+                }
+            }
+        </script>
+        <h3>구구단 출력 함수 만들기</h3>
+        <hr>
+        <script>
+            var n = prompt("구구단 몇 단을 원하세요", ""); //n은 문자열
+            gugudan(n); // 함수 호출
+        </script>
+    </body>
+</html>

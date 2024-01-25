@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lnag="en">
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> break 문 </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h3>입력 받은 숫자는 1부터 더해서 몇까지 더해야 넘는가?</h3>
+        <h4>더해지는 숫자들도 출력해보자.</h3>
+        <hr>
+        <script>
+            let inputNumber = prompt("숫자를 입력하세요.");
+            let i = 1, sum = 0;
+        
+            while (true) {
+                sum += i;
+        
+                if (sum > inputNumber)
+                    break;
+                document.write(i + " ");
+                i++;
+            }
+        
+            document.write(i + "까지 더하면 " + inputNumber + "을 넘는다 : " + sum);
+        </script>
+    </body>
+</html>
