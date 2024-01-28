@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Checker</title>
+    <script>
+        function checkBirthdays1() {
+            let today = new Date(); //today 변수를 사용하여 현재 날짜를 가져옵니다.
+
+            let todayString = today.toISOString().slice(0,10).replace(/-/g,"");
+            // todayString 변수를 사용하여 날짜를 원하는 형식으로 변환합니다.
+            // today.toISOString() 변수에 저장된 현재 날짜를 ISO 형식(국제표준(YYYYMMDD 형식))의 문자열로 변환합니다.
+            // slice(0, 10) 문자열의 처음부분 부터 10번째 인덱스까지의 부분 문자열을 추출합니다. 이는 날짜 부분만을 남기는 역할을 한다.
+            // replce(/-/g,"") 추출된 문자열에서 모든 하이픈(-)을 빈 문자열로 대체한다. 즉 하이픈을 공백으로 대체하여 제거한다.
+
+            let accounts = [ // accounts 배열에 사용자 정보가 포함되어 있습니다. 각 사용자는 이름(name)과 생년월일(dbirth)을 가지고 있습니다.
+                {name: "윤선용", dbirth: "20240910"},
+                {name: "Student01", dbirth: "20240101"},
+                {name: "Student02", dbirth: "20240102"},
+                {name: "Student03", dbirth: "20240103"},
+
+                {name: "Student04", dbirth: "20240104"},
+                {name: "Student05", dbirth: "20240105"},
+                {name: "Student06", dbirth: "20240106"},
+                {name: "Student07", dbirth: "20240107"},
+
+                {name: "Student08", dbirth: "20240108"},
+                {name: "Student09", dbirth: "20240109"},
+                {name: "Student10", dbirth: "20240110"},
+                {name: "Student11", dbirth: "20240111"},
+
+                {name: "Student12", dbirth: "20240112"},
+                {name: "Student13", dbirth: "20240113"},
+                {name: "Student14", dbirth: "20240114"},
+                {name: "Student15", dbirth: "20240115"},
+
+                {name: "Student16", dbirth: "20240120"},
+                {name: "Student17", dbirth: "20240121"},
+                {name: "Student18", dbirth: "20240122"},
+                {name: "Student19", dbirth: "20240123"},
+
+                {name: "Student20", dbirth: "20240124"},
+                {name: "Student21", dbirth: "20240125"},
+                {name: "Student22", dbirth: "20240126"},
+                {name: "Student23", dbirth: "20240127"}
+            ];
+
+            accounts.forEach(function(account) { // forEach 메서드를 사용하여 accounts 배열을 반복하면서 각 사용자의 생일을 확인합니다.
+                if (todayString === account.dbirth) {
+                    alert("생일 축하 드립니다!, " + account.name + "!!!");
+                    //현재 날짜와 사용자의 생일을 비교하여 일치하는 경우 축하 메시지를 alert로 표시합니다.
+                } else { //일치하지 않는 경우 해당 사용자의 이름과 생일이 오늘이 아니라는 메시지를 document.write를 통해 표시합니다.
+                    document.write(account.name + "는 아직 생일이 아니네요." + "<br>");
+                }
+            });
+        }
+    </script>
+        <script>
+            function checkBirthdays2() {
+                let today = new Date(); //today 변수를 사용하여 현재 날짜를 가져옵니다.
+    
+                let todayString = today.toISOString().slice(0,10).replace(/-/g,"");
+                // todayString 변수를 사용하여 날짜를 원하는 형식으로 변환합니다.
+                // today.toISOString() 변수에 저장된 현재 날짜를 ISO 형식(국제표준(YYYYMMDD 형식))의 문자열로 변환합니다.
+                // slice(0, 10) 문자열의 처음부분 부터 10번째 인덱스까지의 부분 문자열을 추출합니다. 이는 날짜 부분만을 남기는 역할을 한다.
+                // replce(/-/g,"") 추출된 문자열에서 모든 하이픈(-)을 빈 문자열로 대체한다. 즉 하이픈을 공백으로 대체하여 제거한다.
+    
+                let accounts = [ // accounts 배열에 사용자 정보가 포함되어 있습니다. 각 사용자는 이름(name)과 생년월일(dbirth)을 가지고 있습니다.
+                    {name: "윤선용", dbirth: "20240126"},
+                    {name: "Student01", dbirth: "20240101"},
+                    {name: "Student02", dbirth: "20240102"},
+                    {name: "Student03", dbirth: "20240103"},
+    
+                    {name: "Student04", dbirth: "20240104"},
+                    {name: "Student05", dbirth: "20240105"},
+                    {name: "Student06", dbirth: "20240106"},
+                    {name: "Student07", dbirth: "20240107"},
+    
+                    {name: "Student08", dbirth: "20240110"},
+                    {name: "Student09", dbirth: "20240111"},
+                    {name: "Student10", dbirth: "20240112"},
+                    {name: "Student11", dbirth: "20240113"},
+    
+                    {name: "Student12", dbirth: "20240114"},
+                    {name: "Student13", dbirth: "20240115"},
+                    {name: "Student14", dbirth: "20240126"},
+                    {name: "Student15", dbirth: "20240121"},
+    
+                    {name: "Student16", dbirth: "20240122"},
+                    {name: "Student17", dbirth: "20240123"},
+                    {name: "Student18", dbirth: "20240124"},
+                    {name: "Student19", dbirth: "20240125"},
+    
+                    {name: "Student20", dbirth: "20240126"},
+                    {name: "Student21", dbirth: "20240127"},
+                    {name: "Student22", dbirth: "20240128"},
+                    {name: "Student23", dbirth: "20240129"}
+                ];
+    
+                accounts.forEach(function(account) { // forEach 메서드를 사용하여 accounts 배열을 반복하면서 각 사용자의 생일을 확인합니다.
+                    if (todayString === account.dbirth) {
+                        alert("생일 축하 드립니다!, " + account.name + "!!!");
+                        //현재 날짜와 사용자의 생일을 비교하여 일치하는 경우 축하 메시지를 alert로 표시합니다.
+                    } else { //일치하지 않는 경우 해당 사용자의 이름과 생일이 오늘이 아니라는 메시지를 document.write를 통해 표시합니다.
+                        document.write(account.name + "는 아직 생일이 아니네요." + "<br>");
+                    }
+                });
+            }
+        </script>
+</head>
+<body>
+    <button onclick="checkBirthdays1()">Check Birthdays</button><br>
+    <button onclick="checkBirthdays2()">Check Birthdays</button><br>
+</body>
+</html>

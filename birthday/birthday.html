@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>시간 정보 입력 응용</title></head>
+    <meta charset="Utf-8">
+<body>
+<h3>생일축하합니다</h3>
+<hr>
+당신의 생일은 2000년 5월 20일입니다. 틀리면 수정하시고
+파티 시간과 장소를 입력하세요.
+<hr>
+<form action="birthday_data.php" method="GET">
+<table>
+	<tr><td>생일<td>
+			<input type="date" name="date1" value="2000-05-20"></tr>
+	<tr><td>생일파티시간<td>
+			<input type="time" name="time1" value=""></tr>
+	<tr><td>생일파티장소<td>
+			<input type="text" name="place1"></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;<td style="text-align: right;"><input type="submit" value="제출"></tr>
+</table>
+</form>
+</body>
+</html>

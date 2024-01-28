@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto Game</title>
+</head>
+<body>
+    <h3>로또 추첨 얼마나 반복해야 맞추는가?</h3>
+
+    <script>
+        let lottonum = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e"];
+        let lotto = [];
+        let counter = 0;
+
+        // Function to generate random lotto number
+        function LottoNumber() {
+            lotto = [];
+            for (let i = 0; i < 4; i++) {
+                lotto.push(lottonum[Math.floor(Math.random() * 15)]);
+            }
+        }
+        
+
+        let user = prompt("원하는 숫자와 문자를 조합하여 4자리를 입력하세요. 0~9, a~e","1ab2");
+
+        // Main game loop
+        while (true) {
+            
+            LottoNumber();
+        
+            counter++;
+
+            if (lotto.join('') === user) { //lotto값을 배열로 만든후 그것을 user가 보낸 값과 같은지 비교한다.
+                document.write("당첨 번호: " + lotto + "<br>");
+                document.write("당첨까지 " + counter + "번 시도했습니다.");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
