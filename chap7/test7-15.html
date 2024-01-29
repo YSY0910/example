@@ -4,8 +4,9 @@
         <title>Birthdy</title>
     </head>
     <body>
-        <h3>Birthday</h3>
+        <h3 style="font-size: 20pt; font-weight: bold; color: black;">Birthday</h3>
         <body>
+            <style>body{color: orangered; background: linen;}</style>
             <script>
 
                 function birthday(name, dbirth) {
@@ -13,29 +14,29 @@
 
                     if(this.dbirth.getMonth() == today.getMonth()
                         && this.dbirth.getDate() == today.getDate()) {
-                      document.write(this.name + "님~ 생일 축하합니다!!! <br>")
+                      document.write(this.name + "님~ 생일 축하합니다!!! <br><br>")
                         }
                         else
-                            document.write(this.name + "님은 생일이 아직 아니에요. <br>")
+                            document.write(this.name + "님은 생일이 아직 아니에요. <br><br>")
                 }
 
                 let student1  = new Object();
                 student1.name = "윤선용";
-                student1.dbirth = new Date("2000.01.29");
+                student1.dbirth = new Date();
                 student1.birthday = birthday;
 
                 student1.birthday(this.name, this.dbirth);
 
                 let student2  = new Object();
                 student2.name = "이스마엘";
-                student2.dbirth = new Date("2000.01.26");
+                student2.dbirth = new Date("2000.01.29");
                 student2.birthday = birthday;
 
                 student2.birthday(this.name, this.dbirth);
 
                 let student3  = new Object();
                 student3.name = "파우스트";
-                student3.dbirth = new Date("2000.01.26");
+                student3.dbirth = new Date("2000.04.26");
                 student3.birthday = birthday;
 
                 student3.birthday(this.name, this.dbirth);
@@ -53,6 +54,33 @@
                 student5.birthday = birthday;
 
                 student5.birthday(this.name, this.dbirth);
+                
+
+                //배열화
+                let students = new Array();
+
+                students.push(student1);
+                students.push(student2);
+                students.push(student3);
+                students.push(student4);
+                students.push(student5);
+
+
+                //배열 안에 있는 name을 변경함.
+                students[0].name = "윤용선";
+                students[1].name = "라이레이";
+                students[2].name = "올가";
+                students[3].name = "루실리카";
+                students[4].name = "루이";
+
+                for(let i = 0; i < students.length; i++)
+                students[i].birthday(this.name, this.dbirth);
+
+                //student[0] = student1;
+                //student[1] = student2;
+                //student[2] = student3;
+                //student[3] = student4;
+                //student[4] = student5;
                 
             </script>
         </body>
