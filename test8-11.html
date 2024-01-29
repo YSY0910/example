@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>문서의 동적 구성2</title>
+        <style></style>
+        <script>
+            function createDIV() {
+                let obj = document.getElementById("parent");
+
+                let newDIV1 = document.createElement("div");
+                newDIV1.innerHTML = "&lt;div&gt;";
+                newDIV1.setAttribute("id", "myDiv");
+                newDIV1.style.backgroundColor = "red";
+                newDIV1.onclick = function() {
+                    let p = this.parentElement; // 부모 HTML 태그 요소
+                    p.removeChild(this); // 자신을 부모로부터 제거
+                };
+                obj.appendChild(newDIV1);
+
+                let newDIV2 = document.createElement("div");
+                newDIV2.innerHTML = "&lt;div&gt;";
+                newDIV2.setAttribute("id", "myDiv1");
+                newDIV2.style.backgroundColor = "orange";
+                newDIV2.onclick = function() {
+                   let p = this.parentElement; // 부모 HTML 태그 요소
+                   p.removeChild(this); // 자신을 부모로부터 제거
+                };
+                newDIV1.appendChild(newDIV2);
+
+                let newP = document.createElement("p");
+                newP.innerHTML = "여기는 &lt;p&gt; 태그";
+                newP.setAttribute("id", "myP");
+                newP.style.backgroundColor = "yellow";
+                newP.onclick = function() {
+                    let p = this.parentElement; // 부모 HTML 태그 요소
+                    p.removeChild(this); // 자신을 부모로부터 제거
+                };
+                newDIV2.appendChild(newP);
+
+                let newSpan = document.createElement("span");
+                newSpan.innerHTML = "여기는 &lt;span&gt;";
+                newSpan.setAttribute("id", "mySpan");
+                newSpan.style.backgroundColor = "green";
+                newSpan.onclick = function() {
+                    let p = this.parentElement; // 부모 HTML 태그 요소
+                    p.removeChild(this); // 자신을 부모로부터 제거
+                };
+                newP.appendChild(newSpan);
+            }
+            </script>
+    </head>
+    <body id="parent">
+        <h3>DIV 객체를 동적으로 생성, 삽입, 삭제하는 예제</h3>
+        <hr>
+        <a href="javascript:createDIV()">생성</a>
+    </body>
+</html>

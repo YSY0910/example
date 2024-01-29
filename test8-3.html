@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lnag="en">
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> innerHTML 활용 </title>
+        <style>  </style>
+    </head>
+    <body>
+        <h3>innerHTML 활용 : 아래 글자에 클릭하면 우리가 사는 지구의 사진이 보입니다.</h3>
+        <hr>
+        <p id="firstP" style="color: blue" onclick="change()">
+            여기에 <span style="color: red;">클릭하세요</span></p>
+        <script>
+            function change(){
+                var p = document.getElementById("firstP");
+                p.innerHTML = "나의 <img src = 'media/Earth.png'>지구";
+            }
+        </script>
+    </body>
+</html>

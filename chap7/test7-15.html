@@ -73,8 +73,16 @@
                 students[3].name = "루실리카";
                 students[4].name = "루이";
 
+                //반복문 for
                 for(let i = 0; i < students.length; i++)
                 students[i].birthday(this.name, this.dbirth);
+
+                //반복문 while
+                let i = 0;
+                while(i < students.length){
+                    students[i].birthday(this.name, this.dbirth);
+                    i++;
+                }
 
                 //student[0] = student1;
                 //student[1] = student2;
