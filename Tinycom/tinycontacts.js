@@ -14,7 +14,11 @@ function displayContactNotFound()
 }
 
 function doSave() {
-    alert("Saves a contact in the store");
+    var name= [];
+    var address= [];
+    var phone= [];
+
+    alert("저장 완료 : " + name[i] + ", " + address[i] + ", " + phone[i]);
 }
 
 function doFind() {
