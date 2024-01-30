@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> oncontextmenu로 소스 보기나 이미지 다운로드 금지 </title>
+        <style>  </style>
+    </head>
+    <body>
+        <h3>onecontextmenu에서 컨텍스트 메뉴 금지</h3>
+        <hr>
+        <script>
+            function hideMenu(){
+                alert("오른쪽 클릭<컨텍스트 메뉴>금지");
+                return false;
+            }
+            document.oncontextmenu=hideMenu;
+        </script>
+        마우스 오른쪽 클릭은 금지됩니다.
+        아무곳이나 클릭해도 컨텍스트 메뉴를 볼 수 없습니다.<br>
+        <img src="media/이스.png" alt="이미지"><br>
+    </body>
+</html>

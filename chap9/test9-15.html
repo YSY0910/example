@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> new Image()로 이미지 로딩 </title>
+        <script>
+            // 미리 로딩해둘 이미지 이름 배열
+            let album=
+                ["media/이스.png",
+                "media/큰이스.png",
+                "media/Earth.png",
+                "media/Sun.png",
+                "media/Mars.png",
+                "media/Uranus.png"];
+            let imgs = new Array();
+            for(let i = 0; i<album.length; i++){
+                imgs[i]= new Image();   //이미지 객체 생성, 대소문자 구분 필수
+                imgs[i].src= album[i];  //이미지 로딩
+            }
+
+            // 다음 이미지 출력
+            let next= 1;
+            function chimg(img){
+                img.src= imgs[next].src; //이미지 변경
+                next++; //다음 이미지
+                next %= imgs.length; //개수를 넘으면 처음으로
+            }
+        </script>
+    </head>
+    <body>
+        <h3>new Image()로 이미지 로딩</h3>
+        <hr>
+        이미지를 클릭하면 다음 이미지를 보여줍니다.<br>
+        <img style="border:20px ridge wheat" src="media/이스.png"
+                            alt="." width="500" height="500" onclick="chimg(this)">
+    </body>
+</html>

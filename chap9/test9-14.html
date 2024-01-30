@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> onload로 이미지 크기 출력 </title>
+        <script>
+            function chimg(){
+                let sel = document.getElementById("sel");
+                let img= document.getElementById("myimg");
+                img.onload = function(){ //이미지 크기 출력
+                    var mySpan = document.getElementById("mySpan");
+                    mySpan.innerHTML = img.width + "x" + img.height;
+                }
+                let index = sel.selectedIndex; //선택한 옵션 인덱스
+                img.src = sel.options[index].value; //<option>의 value 속성
+            }
+        </script>
+    </head>
+    <body onload="chimg()">
+        <h3>onload로 이미지 크기 출력</h3>
+        <hr>
+        <form>
+            <select id="sel" onchange="chimg()">
+                <option value="media/Sun.png">Sun
+                <option value="media/Earth.png">Earth
+                <option value="media/Mars.png">Mars
+                <option value="media/큰이스.png">Char_stand
+                <option value="media/이스.png">LOGO
+            </select>
+            <span id="mySpan">이미지 크기</span>
+            <p><img id="myimg" src="media/Sun.png" alt="."></p>
+        </form>
+    </body>
+</html>
